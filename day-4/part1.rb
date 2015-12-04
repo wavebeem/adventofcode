@@ -10,7 +10,8 @@ class Miner
         n = 0
         begin
             n += 1
-            hex = Digest::MD5.hexdigest(@prefix + n.to_s)
+            input = @prefix + n.to_s
+            hex = Digest::MD5.hexdigest(input)
         end until hex =~ /^0{5}/
         n
     end
