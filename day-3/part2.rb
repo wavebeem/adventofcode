@@ -6,7 +6,7 @@ houses["0 0"] = 2
 txt = File.read("input")
 # txt = "^v"
 
-arr = txt.chomp!.chars.each_with_index
+arr = txt.chomp.chars.each_with_index
 
 robo_txt = arr.select{|c, i| i.even? }.map{|c, i| c }
 norm_txt = arr.select{|c, i| i.odd? }.map{|c, i| c }
